@@ -18,8 +18,12 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     </ItemGroup>
 
+    <!-- NEW bit goes here -->
     <ItemGroup>
-      <Folder Include="Repositories\" />
+        <!-- Don't compile anything from the test project folder in the API project -->
+        <Compile          Remove="StudentCoursesApi_NET8.Tests\**\*.cs" />
+        <None             Remove="StudentCoursesApi_NET8.Tests\**\*" />
+        <EmbeddedResource Remove="StudentCoursesApi_NET8.Tests\**\*" />
     </ItemGroup>
 
 </Project>
