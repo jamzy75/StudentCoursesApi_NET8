@@ -8,6 +8,7 @@ namespace StudentCoursesApi_NET8.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class CoursesController : ControllerBase
 {
     private readonly ICourseRepository _courseRepository;
